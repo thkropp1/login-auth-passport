@@ -1,21 +1,19 @@
-# Complete Guide to Node Authentication with MySQL
+login-auth-passport information:
 
+To run the app(uses port 8080):
 
-Current version database is ported to MySQL
+1. From top directory in git bash, type:
+   npm install
+2. cd to config folder and open database.js and change the mySQL connection 
+   information to your credentials.
+3. Go back to top directory in git bash and cd to scripts folder and type:
+   node create_database 
+4. Go back to top directory in git bash and type:
+   node server
+5. Go to browser and type:
+   http://localhost:8080
 
-We will be using Passport to authenticate users locally 
-
-## Instructions
-
-If you would like to download the code and try it for yourself:
-
-1. Clone the repo: `git clone git@github.com:thkropp1/login-auth-passport.git`
-1. Install packages: `npm install`
-1. Edit the database configuration: `config/database.js`
-1. Create the database schema: `node scripts/create_database.js`
-1. Launch: `node server.js`
-1. Visit in your browser at: `http://localhost:8080`
-
+------------------------------------------------------------------------------------
 Folders:
 
 app: routes.js 
@@ -55,5 +53,3 @@ package.json's dependencies:
 "mysql": "^2.7.0",
 "passport": "^0.2.2",
 "passport-local": "^1.0.0"
-
-
