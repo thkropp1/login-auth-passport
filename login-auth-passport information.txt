@@ -4,7 +4,7 @@ To run the app(uses port 8080):
 
 1. From top directory in git bash, type:
    npm install
-2. cd to config folder and open database.js and change the mySQL connection 
+2. cd to config folder and open database.js and also config.json, and change the mySQL connection 
    information to your credentials.
 3. Go back to top directory in git bash and cd to scripts folder and type:
    node create_database 
@@ -16,40 +16,20 @@ To run the app(uses port 8080):
 ------------------------------------------------------------------------------------
 Folders:
 
-app: routes.js 
-
-config: database.js - Setup your mySQL connection login information
-
-        passport.js - Login and signup authentication. Inserts new user's 
-                      information into users table.
-                      Line 64 is hardcoded with a dummy displayname(first and last 
-                      name) - need to write the code to grab the first and last name 
-                      input from the signup page.
+config: database.js, config.json - Setup your mySQL connection login information
+                      
 
 scripts: create_database.js - Calls database.js and creates the database and the 
                               users table
 
-views: index.ejs - main page to either login or signup new user
-
-       login.ejs - login page
-
-       profile.ejs - displays the user's profile information from the users table.
-                     This is where you would put the flashcard pages instead.
-
-       signup.ejs - signup page for new users
-
-File:
 
 package.json's dependencies:
 
 "bcrypt-nodejs": "0.0.3",
-"body-parser": "^1.13.1",
-"connect-flash": "^0.1.1",
-"cookie-parser": "^1.3.5",
-"ejs": "^2.3.2",
-"express": "^4.13.0",
-"express-session": "^1.11.3",
-"morgan": "^1.6.0",
-"mysql": "^2.7.0",
-"passport": "^0.2.2",
-"passport-local": "^1.0.0"
+"body-parser": "^1.15.2",
+"express": "^4.14.0",
+"express-session": "^1.14.2",
+"mysql2": "^1.3.6",
+"passport": "^0.3.2",
+"passport-local": "^1.0.0",
+"sequelize": "^4.3.1"
