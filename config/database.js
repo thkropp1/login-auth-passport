@@ -2,7 +2,7 @@
 module.exports = {
     'connection': {
         'host': 'localhost',
-        'user': 'tkropp',
+        'user': 'root',
         'password': ''
     },
 	'database': 'flashcards_db',
